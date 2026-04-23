@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --red: #E3000B;
+  --red-dim: #aa0008;
+  --red-glow: rgba(227, 0, 11, 0.22);
+  --black: #080808;
+  --surface: #101010;
+  --card: #131313;
+  --border: rgba(255, 255, 255, 0.07);
+  --text-muted: #6b6b6b;
+  --text-secondary: #9a9a9a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Syne', sans-serif;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
+
+/* ───── Noise grain overlay ───── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px;
+}
+
+/* ───── Utilities ───── */
+.nav-glass {
+  background: rgba(8, 8, 8, 0.82);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border-bottom: 1px solid var(--border);
+}
+
+.card-surface {
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.red-accent {
+  color: var(--red);
+}
+
+.pill-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.pill-label::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--red);
+  display: block;
+}
+
+.glow-red {
+  box-shadow: 0 0 60px rgba(227,0,11,0.28), 0 0 120px rgba(227,0,11,0.10);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background: var(--red);
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #c8000a;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 32px rgba(227,0,11,0.35);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background: transparent;
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.04);
+}
+
+/* product card hover reveal */
+.prod-card .card-cta {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.25s ease;
+}
+.prod-card:hover .card-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
