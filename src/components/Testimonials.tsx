@@ -84,7 +84,7 @@ export default function Testimonials() {
                 className="absolute top-6 right-6 text-7xl font-serif leading-none pointer-events-none select-none"
                 style={{ color: "rgba(227,0,11,0.08)", fontFamily: "Georgia, serif" }}
               >
-                "
+                &quot;
               </span>
 
               <Stars count={t.stars} />

@@ -52,7 +52,6 @@ export default function ProductsGrid() {
                 borderRight: i < products.length - 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
                 minHeight: 380,
               }}
-              whileHover={{ backgroundColor: "#161616" }}
             >
               {/* Badge */}
               {product.badge && (

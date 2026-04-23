@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 
 const combos = [
@@ -38,6 +37,7 @@ const combos = [
 export default function Combos() {
   const { addItem } = useCart();
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleAddCombo = (combo: any) => {
     // Adding as a distinct single product instance for simplicity
     addItem({
@@ -46,6 +46,7 @@ export default function Combos() {
         id: combo.id,
         slug: combo.id,
         name: combo.name,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         category: "combo" as any,
         description: combo.description,
         basePrice: combo.comboPrice,

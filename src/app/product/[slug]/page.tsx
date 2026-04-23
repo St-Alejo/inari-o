@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { getProductBySlug, Product, ProductColor, ProductVariant } from "@/data/products";
+import { getProductBySlug, ProductColor, ProductVariant } from "@/data/products";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useCart } from "@/context/CartContext";
@@ -18,7 +18,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     notFound();
   }
 
-  const { addItem, setIsCartOpen } = useCart();
+  const { addItem } = useCart();
 
   const [selectedColor, setSelectedColor] = useState<ProductColor | undefined>(product.colors?.[0]);
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>(product.variants?.[0]);
