@@ -10,8 +10,8 @@ const reasons = [
   },
   {
     num: "02",
-    title: "Envío a Nariño",
-    description: "Cubrimos Pasto, Ipiales, Tumaco y toda la región. Entrega en 24–48 horas hábiles.",
+    title: "Envío a Todo Colombia",
+    description: "Cubrimos la mayoria de ciudades con una entrega rapida y segura.",
   },
   {
     num: "03",
