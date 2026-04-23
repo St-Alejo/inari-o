@@ -42,14 +42,14 @@ export const products: Product[] = [
       "Material": "Titanio con parte posterior de vidrio mate texturizado",
       "Conectividad": "USB-C, 5G"
     },
-    defaultImages: ["https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-max-black-titanium-select?wid=940&hei=1112&fmt=png-alpha&.v=1693086406290"],
+    defaultImages: ["https://static0.pocketlintimages.com/wordpress/wp-content/uploads/wm/2024/02/iphone-15-pro-max-vs-15-pro-6-copy.jpg"],
     variants: [
       { id: "256gb", name: "256 GB", price: 5199000 },
       { id: "512gb", name: "512 GB", price: 6199000 },
       { id: "1tb", name: "1 TB", price: 7199000 }
     ],
     colors: [
-      { id: "black-titanium", name: "Titanio Negro", hex: "#464644", images: ["https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-max-black-titanium-select?wid=940&hei=1112&fmt=png-alpha&.v=1693086406290"] },
+      { id: "black-titanium", name: "Titanio Negro", hex: "#464644", images: ["https://static0.pocketlintimages.com/wordpress/wp-content/uploads/wm/2024/02/iphone-15-pro-max-vs-15-pro-6-copy.jpg"] },
       { id: "natural-titanium", name: "Titanio Natural", hex: "#b4b2ac", images: ["https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-max-natural-titanium-select?wid=940&hei=1112&fmt=png-alpha&.v=1692898242018"] },
       { id: "white-titanium", name: "Titanio Blanco", hex: "#e2e3e4", images: ["https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-max-white-titanium-select?wid=940&hei=1112&fmt=png-alpha&.v=1692898242008"] },
       { id: "blue-titanium", name: "Titanio Azul", hex: "#354354", images: ["https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-max-blue-titanium-select?wid=940&hei=1112&fmt=png-alpha&.v=1692898242008"] }
