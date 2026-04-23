@@ -6,10 +6,10 @@ import { useCart } from "@/context/CartContext";
 import Link from "next/link";
 
 const links = [
-  { label: "iPhones", href: "#iphones" },
-  { label: "Apple Watch", href: "#apple-watch" },
-  { label: "Accesorios", href: "#accesorios" },
-  { label: "Nosotros", href: "#footer" },
+  { label: "iPhones", href: "/#iphones" },
+  { label: "Apple Watch", href: "/#apple-watch" },
+  { label: "Accesorios", href: "/#accesorios" },
+  { label: "Nosotros", href: "/#footer" },
 ];
 
 export default function Navbar() {
@@ -34,7 +34,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#inicio" className="flex items-center gap-1 group">
+        <Link href="/" className="flex items-center gap-1 group">
           <span
             className="text-xl font-bold tracking-tighter transition-all duration-200"
             style={{ fontFamily: "'Syne', sans-serif", color: "#E3000B" }}
@@ -52,13 +52,13 @@ export default function Navbar() {
             className="w-1 h-1 rounded-full ml-0.5 mb-3 opacity-60"
             style={{ background: "#E3000B" }}
           />
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-10">
           {links.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className="text-[13px] font-medium tracking-wide text-zinc-400 hover:text-white transition-colors duration-200 relative group"
               >
@@ -67,7 +67,7 @@ export default function Navbar() {
                   className="absolute -bottom-0.5 left-0 w-0 h-px bg-red-600 transition-all duration-300 group-hover:w-full"
                   style={{ background: "#E3000B" }}
                 />
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -140,19 +140,19 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.06 }}
                 >
-                  <a
+                  <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
                     className="text-zinc-300 hover:text-white text-base font-medium block"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
               <li>
-                <a href="#iphones" onClick={() => setMenuOpen(false)} className="btn-primary text-xs py-3 w-full justify-center">
+                <Link href="/#iphones" onClick={() => setMenuOpen(false)} className="btn-primary text-xs py-3 w-full justify-center">
                   Ver Tienda
-                </a>
+                </Link>
               </li>
             </ul>
           </motion.div>
