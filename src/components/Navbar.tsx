@@ -99,13 +99,6 @@ export default function Navbar() {
               )}
             </button>
 
-            <Link href="/catalogo" className="hidden lg:flex btn-primary text-xs py-2.5 px-5">
-              Ver tienda
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </Link>
-
             <button
               className="lg:hidden flex flex-col gap-[5px] p-3 relative z-50"
               onClick={() => setMenuOpen(!menuOpen)}

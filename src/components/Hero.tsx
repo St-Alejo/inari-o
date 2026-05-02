@@ -149,23 +149,25 @@ export default function Hero() {
         style={{ background: "linear-gradient(90deg, transparent, rgba(227,0,11,0.35), transparent)" }}
       />
 
-      {/* 3D Canvas — hidden on slow connections / reduced motion */}
-      <PerformanceGate
-        fallback={
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{ background: "radial-gradient(ellipse 50% 60% at 68% 50%, rgba(227,0,11,0.18) 0%, transparent 65%)" }}
-          />
-        }
-      >
-        <div className="absolute inset-0">
-          <Canvas camera={{ position: [0, 0, 5], fov: 43 }} gl={{ antialias: true, alpha: true }} dpr={[1, 1.8]}>
-            <Suspense fallback={null}>
-              <Scene mouseX={mouseRef.current.x} mouseY={mouseRef.current.y} />
-            </Suspense>
-          </Canvas>
-        </div>
-      </PerformanceGate>
+      {/* 3D Canvas — desktop only, hidden on mobile */}
+      <div className="hidden md:block absolute inset-0">
+        <PerformanceGate
+          fallback={
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "radial-gradient(ellipse 50% 60% at 68% 50%, rgba(227,0,11,0.18) 0%, transparent 65%)" }}
+            />
+          }
+        >
+          <div className="absolute inset-0">
+            <Canvas camera={{ position: [0, 0, 5], fov: 43 }} gl={{ antialias: true, alpha: true }} dpr={[1, 1.8]}>
+              <Suspense fallback={null}>
+                <Scene mouseX={mouseRef.current.x} mouseY={mouseRef.current.y} />
+              </Suspense>
+            </Canvas>
+          </div>
+        </PerformanceGate>
+      </div>
 
       {/* Content — left */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full flex flex-col justify-center h-full pt-24 pb-16 pointer-events-none">

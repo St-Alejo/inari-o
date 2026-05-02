@@ -77,7 +77,7 @@ export default function Accessories() {
               transition={{ duration: 0.5, delay: i * 0.07 }}
               className="group flex-shrink-0"
               style={{
-                width: 260,
+                width: "min(260px, 80vw)",
                 scrollSnapAlign: "start",
                 borderRight: i < accessories.length - 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
               }}

@@ -26,13 +26,13 @@ export default function BrandLogo({
         className={`${s.text} font-bold tracking-tighter`}
         style={{ fontFamily: "'Syne', sans-serif", color: "#E3000B" }}
       >
-        Inn
+        I
       </span>
       <span
         className={`${s.text} font-bold tracking-tighter text-white`}
         style={{ fontFamily: "'Syne', sans-serif" }}
       >
-        arino
+        nariño
       </span>
       <span
         className={`${s.dot} rounded-full ml-1 mb-2 opacity-60`}

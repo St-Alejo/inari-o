@@ -154,7 +154,7 @@ export default function WatchShowcase() {
             </ul>
 
             {/* Price + CTA */}
-            <div className="flex items-center justify-between pt-2">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-2">
               <div>
                 <p className="text-[11px] text-zinc-600 uppercase tracking-widest mb-1">Precio</p>
                 <p className="text-3xl font-bold" style={{ fontFamily: "'Syne', sans-serif", color: "#E3000B" }}>

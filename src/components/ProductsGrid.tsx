@@ -43,6 +43,7 @@ export default function ProductsGrid() {
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.55, delay: i * 0.08 }}
               key={product.id}
+              className={i >= 3 ? "hidden sm:block" : ""}
             >
             <Link
               href={`/product/${product.slug}`}
@@ -115,12 +116,12 @@ export default function ProductsGrid() {
           transition={{ delay: 0.4 }}
           className="flex justify-center mt-12"
         >
-          <a href="#" className="btn-outline text-sm">
+          <Link href="/catalogo" className="btn-outline text-sm">
             Ver toda la colección
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

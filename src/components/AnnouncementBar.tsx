@@ -38,7 +38,7 @@ export default function AnnouncementBar() {
           aria-label="Anuncio"
         >
           <div
-            className="flex items-center gap-3 px-4 py-2.5 rounded-full text-[11px] font-medium tracking-wide whitespace-nowrap shadow-2xl"
+            className="flex items-center gap-3 px-4 py-2.5 rounded-full text-[11px] font-medium tracking-wide shadow-2xl"
             style={{
               background: "rgba(16,16,16,0.95)",
               border: "1px solid rgba(255,255,255,0.1)",
