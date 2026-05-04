@@ -58,13 +58,13 @@ export default function SplashGate() {
                 className="text-6xl md:text-7xl font-bold tracking-tighter"
                 style={{ fontFamily: "'Syne', sans-serif", color: "#E3000B" }}
               >
-                Inn
+                In
               </span>
               <span
                 className="text-6xl md:text-7xl font-bold tracking-tighter text-white"
                 style={{ fontFamily: "'Syne', sans-serif" }}
               >
-                arino
+                ariño
               </span>
               <motion.span
                 initial={{ scale: 0 }}
